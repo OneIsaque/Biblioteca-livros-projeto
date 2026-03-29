@@ -322,4 +322,4 @@ import { db } from './firebase-config.js';
     }
 
     // Inicializar quando a página carregar
-    document.addEventListener('DOMContentLoaded', window.carregarPagina);
+    document.addEventListener('DOMContentLoaded', window.carregarPagina);   
