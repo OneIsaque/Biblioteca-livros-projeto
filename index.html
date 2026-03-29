@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📚 Biblioteca Firebase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Biblioteca Digital</h1>
+      <p>Sistema NoSQL com Firebase Firestore</p>
+    </header>
+
+    <!-- BUSCA EXTERNA (Google Books) -->
+    <section class="card">
+      <h2>🔍 Buscar Livro Externo</h2>
+      <div class="search-box">
+        <input type="text" id="buscaExterna" placeholder="Ex: Os Miseráveis, Victor Hugo" />
+        <button onclick="buscarLivroExterno()">Buscar</button>
+      </div>
+      <div id="resultadosExternos" class="resultados"></div>
+    </section>
+
+    <!-- CADASTRAR / EDITAR LIVRO -->
+    <section class="card">
+      <h2 id="formTitulo">✏️ Cadastrar Livro</h2>
+      <form id="formLivro">
+        <input type="hidden" id="livroId" />
+        <div class="form-group">
+          <label>Título *</label>
+          <input type="text" id="titulo" required />
+        </div>
+        <div class="form-group">
+          <label>Autor *</label>
+          <input type="text" id="autor" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ano</label>
+            <input type="number" id="ano" min="1000" max="2100" />
+          </div>
+          <div class="form-group">
+            <label>Páginas</label>
+            <input type="number" id="paginas" min="1" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Descrição</label>
+          <textarea id="descricao" rows="3" placeholder="Breve descrição..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>URL da Capa</label>
+          <input type="url" id="capa" placeholder="https://..." />
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">💾 Salvar</button>
+          <button type="button" class="btn-secondary" onclick="limparFormulario()">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- LISTA DE LIVROS -->
+    <section class="card">
+      <div class="section-header">
+        <h2>📖 Acervo</h2>
+        <div class="filtros">
+          <input type="text" id="filtroLista" placeholder="Filtrar..." oninput="filtrarLivros()" />
+          <select id="filtroStatus" onchange="filtrarLivros()">
+            <option value="todos">Todos</option>
+            <option value="disponivel">Disponíveis</option>
+            <option value="emprestado">Emprestados</option>
+          </select>
+        </div>
+      </div>
+      <div id="listaLivros" class="lista"></div>
+    </section>
+  </div>
+
+  <!-- MODAL DE EMPRÉSTIMO -->
+  <dialog id="modalEmprestimo">
+    <form method="dialog" id="formEmprestimo">
+      <h3>📤 Emprestar Livro</h3>
+      <p><strong>Livro:</strong> <span id="modalLivroTitulo"></span></p>
+      <input type="hidden" id="modalLivroId" />
+      <div class="form-group">
+        <label>Nome do Usuário *</label>
+        <input type="text" id="usuarioNome" required />
+      </div>
+      <div class="form-group">
+        <label>Previsão de Devolução</label>
+        <input type="date" id="dataDevolucao" />
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" onclick="fecharModal()">Cancelar</button>
+        <button type="submit" class="btn-primary">Confirmar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- TOAST NOTIFICAÇÃO -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="database.js"></script>
+  <script type="module" src="main33.js"></script>
+</body>
+</html>
