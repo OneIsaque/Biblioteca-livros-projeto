@@ -330,7 +330,7 @@ copies or substantial portions of the Software.
 - Isaque João  -> ([@OneIsaque](https://github.com/OneIsaque))
 - Jonas Thiago -> ([@jonas-thiago](https://github.com/jonas-thiago))
 - Elias Pierry -> ([@eliaspierry21](https://github.com/eliaspierry21))
-
+- Heloysa Renata -> ([@Heloysasz](https://github.com/Heloysasz))
 ---
 
 Desenvolvido como projeto de aprendizado em **Bancos de Dados NoSQL** com Firebase.
