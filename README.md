@@ -262,7 +262,7 @@ service cloud.firestore {
 ```
 ---
 ### 🆙Possíveis atualizações futuras
-- 🔌 **Integração com Google Books API** - para buscar e armazenar dados externos no Banco.
+- ~🔌 **Integração com Google Books API** - para buscar e armazenar dados externos no Banco.~
 - Sistema de compartilhar livros entre usuários
 
 
