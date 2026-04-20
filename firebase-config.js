@@ -6,7 +6,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-// 🔑 COLE ESTES DADOS DO SEU PROJETO FIREBASE
+
 const firebaseConfig = {
   apiKey: "AIzaSyDmSm0KD6bDL1sDFil5_nVhendJxYDiVF4",
   authDomain: "biblioteca-pij2.firebaseapp.com",
