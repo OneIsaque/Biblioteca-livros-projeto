@@ -1,5 +1,6 @@
 #  Biblioteca Firebase - Sistema de Gerenciamento NoSQL
 
+![Versão](https://img.shields.io/badge/Versão-1.1.0-green?style=flat)
 ![Firebase](https://img.shields.io/badge/Firebase-10.8.0-FFCA28?style=flat&logo=firebase)
 ![Firestore](https://img.shields.io/badge/Firestore-NoSQL-4285F4?style=flat)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat&logo=javascript)
@@ -259,6 +260,32 @@ Permission is hereby granted, free of charge, to any person obtaining a copy...
 - [MDN Web Docs - ES6 Modules](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Modules)
 
 ---
+
+## 📦 Changelog (Histórico de Versões)
+
+### v1.1.0 (Atual)
+> 🚀 **Melhorias de UX, Integração com API Externa e Segurança**
+
+**✨ Novas Funcionalidades:**
+*   **Modal de Detalhes:** Visualização completa do livro ao clicar no título (sinopse, metadados e status).
+*   **Google Books API:** Busca externa de livros com opção de importação rápida para o acervo.
+
+**🎨 UX/UI:**
+*   Interface do modal responsiva para mobile e desktop.
+*   Indicadores visuais de hover nos títulos da lista de livros.
+
+**🛡️ Segurança e DevEx:**
+*   Implementação de `.gitignore` para proteger chaves de API e credenciais do Firebase.
+*   Estrutura de variáveis de ambiente (`.env.example`) para fácil configuração em novas máquinas.
+*   Documentação atualizada com instruções de segurança e RESTRIÇÕES de API Key.
+
+---
+
+### v1.0.0 (Lançamento Inicial)
+*   CRUD completo de Livros e Empréstimos.
+*   Integração com Firebase Firestore.
+*   Filtros e busca básica.
+
 
 [⬆ Voltar ao topo](#-biblioteca-firebase---sistema-de-gerenciamento-nosql)
 
