@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>📚 Biblioteca Firebase</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- CSS do Modal de Detalhes -->
+<link rel="stylesheet" href="modal-detalhes.css">
 </head>
 <body>
   <div class="container">
@@ -18,7 +20,7 @@
       <h2>🔍 Buscar Livro Externo</h2>
       <div class="search-box">
         <input type="text" id="buscaExterna" placeholder="Ex: Os Miseráveis, Victor Hugo" />
-        <button onclick="buscarLivroExterno()">Buscar</button>
+        <button id="btnBuscarExterno" onclick="window.buscarLivroExterno(event)">Buscar</button>
       </div>
       <div id="resultadosExternos" class="resultados"></div>
     </section>
@@ -99,14 +101,37 @@
     </form>
   </dialog>
 
+  
+<!-- Modal de Detalhes do Livro -->
+<dialog id="modalDetalhes">
+  <div class="modal-detalhes-conteudo">
+    <button class="btn-fechar-modal" onclick="window.fecharModalDetalhes()">✕</button>
+    <div id="conteudoDetalhes">
+      <!-- Conteúdo será inserido via JavaScript -->
+    </div>
+  </div>
+</dialog>
+
+
   <!-- TOAST NOTIFICAÇÃO -->
   <div id="toast" class="toast hidden"></div>
 
-  <!-- SCRIPTS -->
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="database.js"></script>
-  <script type="module" src="main33.js">
-    
-  </script>
+<!-- Modal de Detalhes -->
+<dialog id="modalDetalhes">
+  <div class="modal-detalhes-conteudo">
+    <button class="btn-fechar-modal" onclick="window.fecharModalDetalhes()">✕</button>
+    <div id="conteudoDetalhes">
+      <!-- Conteúdo será inserido via JavaScript -->
+    </div>
+  </div>
+</dialog>
+
+<!-- Scripts em módulo (ORDEM IMPORTANTE!) -->
+<script type="module" src="google-config.js"></script>
+<script type="module" src="firebase-config.js"></script>
+<script type="module" src="database.js"></script>
+<script type="module" src="abrir-modal-detalhes.js"></script>
+<script type="module" src="main33.js"></script>
+
 </body>
 </html>

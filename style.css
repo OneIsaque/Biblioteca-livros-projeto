@@ -199,6 +199,17 @@ dialog::backdrop { background: rgba(0,0,0,0.5); }
   margin-top: 20px;
 }
 
+.livro-info h3 {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.livro-info h3:hover {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+
 /* ===== TOAST ===== */
 .toast {
   position: fixed;
@@ -240,4 +251,16 @@ dialog::backdrop { background: rgba(0,0,0,0.5); }
   .section-header { flex-direction: column; align-items: flex-start; }
   .filtros { width: 100%; }
   .livro-acoes { flex-direction: row; }
+}
+
+
+/* ===== CURSOR NO TÍTULO ===== */
+.livro-info h3 {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.livro-info h3:hover {
+  color: #1a73e8;
+  text-decoration: underline;
 }
